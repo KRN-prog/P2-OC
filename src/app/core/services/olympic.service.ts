@@ -141,7 +141,8 @@ export class OlympicService {
   /**
    * This function is an observable of type LineChart[] that return the data relating to the proper functioning of the LineChart, and ensures that the country is contained in the data called
    * @param countryId - The country id which is its name (ex: Germany)
-   * @returns An array of objects of type LineChart[] that contain "name" for the name of the country, "series" which is also an array of objects containing, "name" for the year of participations and "value" for the number of medals, for the country sorted by id present in our table of objects
+   * @returns un tableau d'objets de type LineChart[] qui contient "name" pour le nom du pays, "series" qui est aussi un tableau d'objts contenant, "name" l'année de participations et "value" pour le nombre de médailles, pour le pays trié par id présent dans notre tableau d'objets
+   * An array of objects of type LineChart[] that contain "name" for the name of the country, "series" which is also an array of objects containing, "name" for the year of participations and "value" for the number of medals, for the country sorted by id present in our table of objects
    *
    * @public
    */
