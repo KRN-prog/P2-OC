@@ -1,29 +1,40 @@
+
 # OlympicGamesStarter
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.1.3.
+To be able to run this project properly, **please follow the following steps** :
 
-Don't forget to install your node_modules before starting (`npm install`).
 
-## Development server
+## npm / yarn installation :
+Before running the projects you will need to install the differents depedencies of the project, to be able to download them you will just need to run in a terminal in your project folder the following command : 
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+*npm install* or if you want to use yarn just do *yarn*
 
-## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Launching the project
+To lauch the project you can run the command line `ng serve` in your terminal inside the project, the project will normally open itself in your browser. If it doesn't open you can go to [http://localhost:4200] to view it in your browser.
 
-## Where to start
 
-As you can see, an architecture has already been defined for the project. It is just a suggestion, you can choose to use your own. The predefined architecture includes (in addition to the default angular architecture) the following:
+## Mocked data
+The mocked data, are located in the 'mock' directory (inside the 'assets' directory), mocked data are already imported in the 'Olympic.service.ts' file (in the 'services' folder who is inside the 'core' folder).
 
-- `components` folder: contains every reusable components
-- `pages` folder: contains components used for routing
-- `core` folder: contains the business logic (`services` and `models` folders)
 
-I suggest you to start by understanding this starter code. Pay an extra attention to the `app-routing.module.ts` and the `olympic.service.ts`.
 
-Once mastered, you should continue by creating the typescript interfaces inside the `models` folder. As you can see I already created two files corresponding to the data included inside the `olympic.json`. With your interfaces, improve the code by replacing every `any` by the corresponding interface.
+## Here is the complete list of each depedencies and how to install it if you have trouble with the npm / yarn installation
 
-You're now ready to implement the requested features.
+### ngx-charts
+This project is using *ngx-charts* to display the pie chart and line chart of the application, if this depedencie didin't install itself during the *npm / yarn installation* you will need to install it by running this following command in the terminal inside your project :
 
-Good luck!
+*npm install @swimlane/ngx-charts --save*
+Note: if you have trouble running this command add *--force* next to --save.
+
+[Link](https://swimlane.gitbook.io/ngx-charts/installing)
+
+
+
+### D3
+This project is also using *D3* to display the differents charts of the application, if this depedencie didin't install itself during the *npm / yarn installation* you will need to install it by running this following command in the terminal inside your project :
+
+*npm install d3*
+Note: if you have trouble running this command add *--force*
+
+[Link](https://www.npmjs.com/package/d3)

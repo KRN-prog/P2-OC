@@ -1,0 +1,21 @@
+<main>
+    <section>
+        <article class="article">
+            <button class="goBackBtn" (click)="onNavigate()">Go back</button>
+            <div class="articleFor" *ngFor="let datas of olympicsById$ | async">
+                <div class="article__container">
+                    <h2 class="article__heading ">{{ datas.country }}</h2>
+                </div>
+                <div class="article__container">
+                    <span class="article__container__totals">Total athlete: {{ datas.totalAthlete }}</span>
+                    <span class="article__container__totals">Total entries: {{ datas.totalEntries }}</span>
+                    <span class="article__container__totals">Total medals: {{ datas.totalMedals }}</span>
+                </div>
+            </div>
+            <div class="lineChartsContainer">
+                <app-line-charts class="lineCharts" [lineChartData]="(olympicsLineChartById$ | async)"></app-line-charts>
+                <h3 class="lineChartsDates">Dates</h3>
+            </div>
+        </article>
+    </section>
+</main>

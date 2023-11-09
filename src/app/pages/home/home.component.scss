@@ -1,0 +1,30 @@
+.article{
+    &__chart{
+        flex-basis: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;    
+    }
+    &__pieChart{
+        flex-basis: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        &__totals{
+            margin: 15px;
+            padding: 7px 15px;
+            border: 1.7px solid #39818d;
+            border-radius: 6px;
+            color: #707070;
+            font-weight: lighter;
+        }
+    }
+}
+
+.totalsNumber{
+    display: block;
+    margin-top: 5px;
+    text-align: center;
+    font-weight: bold;
+    color: #000;
+}

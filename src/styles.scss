@@ -1,1 +1,114 @@
 /* You can add global styles to this file, and also import other style files */
+body{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+.header{
+    display: block;
+    text-align: center;
+    &__heading{
+        display: inline-block;
+        margin: 15px 0;
+    }
+}
+.article{
+    display: flex;
+    flex-wrap: wrap;
+    &__heading{
+        margin: auto;
+        margin-top: 50px;
+        margin-bottom: 15px;
+        background: #39818d;
+        color: #fff;
+        padding: 10px 15px;
+        border-radius: 7px;
+        font-weight: lighter;
+        letter-spacing: 2px;
+    }
+    &__container{
+        flex-basis: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        &__totals{
+            margin: 5px;
+            padding: 7px 15px;
+            border: 1.7px solid #39818d;
+            border-radius: 6px;
+            color: #707070;
+            font-weight: lighter;
+        }
+    }
+}
+
+.lineCharts{
+    flex-basis: 100%;
+}
+.goBackBtn{
+    margin-left: auto;
+    margin-right: 35px;
+    border: none;
+    background: #39818d;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 7px;
+    font-weight: lighter;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: all .3s ease;
+    &:hover{
+        background: #5caebc; 
+    }
+}
+
+// ===============================================
+
+$blue: #39818d;
+$white: #fff;
+$chart-tooltip-border-radius: 5px;
+$chart-caret-size: 7px solid $blue !default;
+
+/* Add application styles & imports to this file! */
+
+.chart__tooltip-sub-label {
+    color: $white;
+    font-size: 10px;
+}
+
+.ngx-charts-tooltip-content.type-tooltip {
+    background-color: $blue !important;
+    border-radius: $chart-tooltip-border-radius !important;
+    color: $white !important;
+    padding: 8px !important;
+}
+.ngx-charts-tooltip-content.type-tooltip {
+    background-color: $blue !important;
+    color: $white !important;
+}
+
+.ngx-charts-tooltip-content.type-tooltip .tooltip-caret.position-top {
+    border-top: $chart-caret-size !important;
+}
+
+.ngx-charts-tooltip-content.type-tooltip .tooltip-caret.position-right {
+    border-right: $chart-caret-size !important;
+}
+
+.ngx-charts-tooltip-content.type-tooltip .tooltip-caret.position-bottom {
+    border-bottom: $chart-caret-size !important;
+}
+
+.ngx-charts-tooltip-content.type-tooltip .tooltip-caret.position-left {
+    border-left: $chart-caret-size !important;
+}
+
+.m-none {
+  margin: 0 !important;
+  font-weight: normal;
+  font-size: 15px;
+}
+.chart__tooltip-sub-label{
+    font-size: 13px;
+    font-weight: lighter;
+}

@@ -1,0 +1,9 @@
+<ngx-charts-pie-chart [view]="chartView" [labels]="showLabels" [results]="pieChartData" (select)="onSelect($event)">
+    <ng-template class="ngTemplate" #tooltipTemplate let-model="model">
+        <h3 class="m-none">{{ model.name }}</h3>
+        <span class="chart__tooltip-sub-label">
+            <img [src]="medal" alt="medal" class="medalSvg">{{ model.value }}
+        </span>
+    </ng-template>
+</ngx-charts-pie-chart>
+  

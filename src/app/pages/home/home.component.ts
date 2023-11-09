@@ -1,18 +1,20 @@
-import { Component, OnInit } from '@angular/core';
-import { Observable, of } from 'rxjs';
+import { Component } from '@angular/core';
+import { Observable } from 'rxjs';
 import { OlympicService } from 'src/app/core/services/olympic.service';
+import { PieChart } from 'src/app/core/models/PieChart';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
 })
-export class HomeComponent implements OnInit {
-  public olympics$: Observable<any> = of(null);
+export class HomeComponent {
+  public olympicsTotalCountryData$: Observable<number> =
+    this.olympicService.getTotalsCountry();
+  public olympicsTotalParticipationData$: Observable<number> =
+    this.olympicService.getOlympicsTotalParticipation();
+  public olympicsPieData$: Observable<PieChart[]> =
+    this.olympicService.getOlympicsPieData();
 
-  constructor(private olympicService: OlympicService) {}
-
-  ngOnInit(): void {
-    this.olympics$ = this.olympicService.getOlympics();
-  }
+  constructor(public olympicService: OlympicService) {}
 }
